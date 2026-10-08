@@ -1,0 +1,19 @@
+name: seed-bot
+on:
+  workflow_dispatch:
+permissions: write-all
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: seed bot-authored objects
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 battery/seed_bot.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seed-bot
+          path: seed-bot.json
