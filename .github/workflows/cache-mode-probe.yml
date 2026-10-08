@@ -1,0 +1,87 @@
+name: cache-mode-probe
+on:
+  workflow_dispatch:
+    inputs:
+      plan:
+        description: 'JSON array of probe steps'
+        required: true
+        default: '[]'
+permissions:
+  contents: read
+jobs:
+  modewrite:
+    runs-on: ubuntu-latest
+    cache-mode: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        env:
+          PROBE_PLAN: ${{ inputs.plan }}
+          PROBE_LABEL: cache-mode-write
+        with:
+          script: |
+            const probe = require(`${process.env.GITHUB_WORKSPACE}/.github/probe/cache-probe.js`)
+            await probe({core})
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mode-${{ github.job }}
+          path: probe-results-*.json
+          if-no-files-found: warn
+  moderead:
+    runs-on: ubuntu-latest
+    cache-mode: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        env:
+          PROBE_PLAN: ${{ inputs.plan }}
+          PROBE_LABEL: cache-mode-read
+        with:
+          script: |
+            const probe = require(`${process.env.GITHUB_WORKSPACE}/.github/probe/cache-probe.js`)
+            await probe({core})
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mode-${{ github.job }}
+          path: probe-results-*.json
+          if-no-files-found: warn
+  modewriteonly:
+    runs-on: ubuntu-latest
+    cache-mode: write-only
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        env:
+          PROBE_PLAN: ${{ inputs.plan }}
+          PROBE_LABEL: cache-mode-write-only
+        with:
+          script: |
+            const probe = require(`${process.env.GITHUB_WORKSPACE}/.github/probe/cache-probe.js`)
+            await probe({core})
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mode-${{ github.job }}
+          path: probe-results-*.json
+          if-no-files-found: warn
+  modenone:
+    runs-on: ubuntu-latest
+    cache-mode: none
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        env:
+          PROBE_PLAN: ${{ inputs.plan }}
+          PROBE_LABEL: cache-mode-none
+        with:
+          script: |
+            const probe = require(`${process.env.GITHUB_WORKSPACE}/.github/probe/cache-probe.js`)
+            await probe({core})
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mode-${{ github.job }}
+          path: probe-results-*.json
+          if-no-files-found: warn
