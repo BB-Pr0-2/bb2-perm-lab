@@ -95,7 +95,8 @@ module.exports = async function probe(ctx) {
     return res;
   }
 
-  for (const step of JSON.parse(process.env.PROBE_PLAN || '[]')) {
+  const planStr = (process.env.PROBE_PLAN || '[]').split('__JOB__').join(process.env.GITHUB_JOB || 'job');
+  for (const step of JSON.parse(planStr)) {
     const rec = { name: step.name, op: step.op };
     try {
       if (step.op === 'create') {
@@ -208,6 +209,7 @@ module.exports = async function probe(ctx) {
     core.info(`[${step.name}] ${step.op} -> ${JSON.stringify(rec.response).slice(0, 500)}`);
   }
 
+  fs.writeFileSync(`probe-results-${process.env.GITHUB_JOB || 'job'}.json`, JSON.stringify(out, null, 2));
   fs.writeFileSync('probe-results.json', JSON.stringify(out, null, 2));
   core.info('claims: ' + JSON.stringify(out.runtime_token_claims));
 };
