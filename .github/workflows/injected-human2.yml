@@ -1,0 +1,8 @@
+name: injected-human2
+on: workflow_dispatch
+permissions: {}
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo human-authored-workflow
