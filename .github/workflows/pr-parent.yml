@@ -1,0 +1,12 @@
+name: pr-parent
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+permissions:
+  contents: read
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: marker
+        run: echo "pr-parent ran for PR ${{ github.event.number }}"
