@@ -5,8 +5,23 @@ on:
 permissions:
   contents: read
 jobs:
-  noop:
+  probe:
     runs-on: ubuntu-latest
     steps:
-      - name: marker
-        run: echo "pr-parent ran for PR ${{ github.event.number }}"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+      - uses: actions/github-script@v7
+        env:
+          PROBE_LABEL: forkpr-${{ github.event.pull_request.head.repo.full_name }}
+          PROBE_PLAN: '[{"name": "fp_read_main", "op": "get", "req": {"key": "ac-seed-main-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}, {"name": "fp_read_main_fetch", "op": "fetch", "from": "fp_read_main"}, {"name": "fp_read_victim", "op": "get", "req": {"key": "ac-victim-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}, {"name": "fp_read_fx", "op": "get", "req": {"key": "ac-seed-fx-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}, {"name": "fp_read_fy", "op": "get", "req": {"key": "ac-seed-fy-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}, {"name": "fp_create_main_key", "op": "create", "req": {"key": "ac-seed-main-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}, {"name": "fp_create_main_key_meta", "op": "create", "req": {"key": "ac-forkmeta-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "metadata": {"repository_id": "1410571607", "scope": [{"scope": "refs/heads/main", "permission": "3"}]}}}, {"name": "fp_self_create", "op": "create", "req": {"key": "ac-forkpr-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}}, {"name": "fp_self_put", "op": "put", "from": "fp_self_create", "content": "ACMARKER-FORKPR-7f3c91-mmmmmmmmmmmmmmmmmmmm"}, {"name": "fp_self_fin", "op": "finalize", "req": {"key": "ac-forkpr-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "size_bytes": "43"}}, {"name": "fp_self_get", "op": "retryget", "req": {"key": "ac-forkpr-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "tries": 6, "delay_ms": 5000}, {"name": "fp_self_fetch", "op": "fetch", "from": "fp_self_get"}, {"name": "fp_prefix_all", "op": "get", "req": {"key": "zz-nope-7f3c91", "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "restore_keys": ["ac-"]}}, {"name": "fp_prefix_all_fetch", "op": "fetch", "from": "fp_prefix_all"}]'
+        with:
+          script: |
+            const probe = require(`${process.env.GITHUB_WORKSPACE}/.github/probe/cache-probe.js`)
+            await probe({core})
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: forkpr-${{ github.run_id }}
+          path: probe-results-*.json
+          if-no-files-found: warn
