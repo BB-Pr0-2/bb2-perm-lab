@@ -1,0 +1,356 @@
+{
+ "created": "2026-10-08T15:30:23Z",
+ "bb2-perm-lab": {
+  "id": 1410571607,
+  "node_id": "R_kgDOVBOdVw",
+  "full_name": "BB-Pr0-2/bb2-perm-lab",
+  "default_branch": "main"
+ },
+ "bb2-perm-priv": {
+  "id": 1410571711,
+  "node_id": "R_kgDOVBOdvw",
+  "full_name": "BB-Pr0-2/bb2-perm-priv",
+  "default_branch": "main"
+ },
+ "bb2-perm-pub2": {
+  "id": 1410571788,
+  "node_id": "R_kgDOVBOeDA",
+  "full_name": "BB-Pr0-2/bb2-perm-pub2",
+  "default_branch": "main"
+ },
+ "priv_secret_blob_sha": "9bcf3e25ac3e3f2ddf1401c202625199119e6079",
+ "priv_secret_commit": "1e4abf440ef7cfae83448be576ef9da3aefac121",
+ "issues": {
+  "lab_T1": {
+   "number": 1,
+   "id": 5764551977,
+   "node_id": "I_kwDOVBOdV88AAAABV5gVKQ",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/1"
+  },
+  "lab_T2": {
+   "number": 2,
+   "id": 5764552146,
+   "node_id": "I_kwDOVBOdV88AAAABV5gV0g",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/2"
+  },
+  "lab_T3": {
+   "number": 3,
+   "id": 5764552292,
+   "node_id": "I_kwDOVBOdV88AAAABV5gWZA",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/3"
+  },
+  "lab_T4": {
+   "number": 4,
+   "id": 5764552424,
+   "node_id": "I_kwDOVBOdV88AAAABV5gW6A",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/4"
+  },
+  "lab_T5": {
+   "number": 5,
+   "id": 5764552537,
+   "node_id": "I_kwDOVBOdV88AAAABV5gXWQ",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/5"
+  },
+  "lab_L1": {
+   "number": 6,
+   "id": 5764552692,
+   "node_id": "I_kwDOVBOdV88AAAABV5gX9A",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/6"
+  },
+  "lab_LX1": {
+   "number": 7,
+   "id": 5764552843,
+   "node_id": "I_kwDOVBOdV88AAAABV5gYiw",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/7"
+  },
+  "lab_LX2": {
+   "number": 8,
+   "id": 5764553062,
+   "node_id": "I_kwDOVBOdV88AAAABV5gZZg",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/8"
+  },
+  "lab_LX3": {
+   "number": 9,
+   "id": 5764553277,
+   "node_id": "I_kwDOVBOdV88AAAABV5gaPQ",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/9"
+  },
+  "lab_LX4": {
+   "number": 10,
+   "id": 5764553419,
+   "node_id": "I_kwDOVBOdV88AAAABV5gayw",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/10"
+  },
+  "lab_LX5": {
+   "number": 11,
+   "id": 5764553547,
+   "node_id": "I_kwDOVBOdV88AAAABV5gbSw",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/11"
+  },
+  "lab_LX6": {
+   "number": 12,
+   "id": 5764553672,
+   "node_id": "I_kwDOVBOdV88AAAABV5gbyA",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-lab/issues/12"
+  },
+  "priv_P1": {
+   "number": 1,
+   "id": 5764554000,
+   "node_id": "I_kwDOVBOdv88AAAABV5gdEA",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-priv/issues/1"
+  },
+  "priv_P2": {
+   "number": 2,
+   "id": 5764554161,
+   "node_id": "I_kwDOVBOdv88AAAABV5gdsQ",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-priv/issues/2"
+  },
+  "priv_P3": {
+   "number": 3,
+   "id": 5764554331,
+   "node_id": "I_kwDOVBOdv88AAAABV5geWw",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-priv/issues/3"
+  },
+  "priv_P4": {
+   "number": 4,
+   "id": 5764554500,
+   "node_id": "I_kwDOVBOdv88AAAABV5gfBA",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-priv/issues/4"
+  },
+  "pub2_H1": {
+   "number": 1,
+   "id": 5764554655,
+   "node_id": "I_kwDOVBOeDM8AAAABV5gfnw",
+   "html_url": "https://github.com/BB-Pr0-2/bb2-perm-pub2/issues/1"
+  }
+ },
+ "priv_feat_commit": "c0fc3ea96c4c50fd52c70739200fb99c3d495810",
+ "priv_pr": {
+  "number": 5,
+  "id": 4789149209,
+  "node_id": "PR_kwDOVBOdv88AAAABHXSeGQ"
+ },
+ "priv_release": {
+  "id": 406986801,
+  "node_id": "RE_kwDOVBOdv84YQiAx"
+ },
+ "priv_main_sha": "1e4abf440ef7cfae83448be576ef9da3aefac121",
+ "disc_categories": {
+  "bb2-perm-lab": {
+   "Announcements": {
+    "id": "DIC_kwDOVBOdV84DHWOL",
+    "answerable": false
+   },
+   "General": {
+    "id": "DIC_kwDOVBOdV84DHWOM",
+    "answerable": false
+   },
+   "Ideas": {
+    "id": "DIC_kwDOVBOdV84DHWOO",
+    "answerable": false
+   },
+   "Polls": {
+    "id": "DIC_kwDOVBOdV84DHWOQ",
+    "answerable": false
+   },
+   "Q&A": {
+    "id": "DIC_kwDOVBOdV84DHWON",
+    "answerable": true
+   },
+   "Show and tell": {
+    "id": "DIC_kwDOVBOdV84DHWOP",
+    "answerable": false
+   }
+  },
+  "bb2-perm-priv": {
+   "Announcements": {
+    "id": "DIC_kwDOVBOdv84DHWOR",
+    "answerable": false
+   },
+   "General": {
+    "id": "DIC_kwDOVBOdv84DHWOS",
+    "answerable": false
+   },
+   "Ideas": {
+    "id": "DIC_kwDOVBOdv84DHWOU",
+    "answerable": false
+   },
+   "Polls": {
+    "id": "DIC_kwDOVBOdv84DHWOW",
+    "answerable": false
+   },
+   "Q&A": {
+    "id": "DIC_kwDOVBOdv84DHWOT",
+    "answerable": true
+   },
+   "Show and tell": {
+    "id": "DIC_kwDOVBOdv84DHWOV",
+    "answerable": false
+   }
+  },
+  "bb2-perm-pub2": {
+   "Announcements": {
+    "id": "DIC_kwDOVBOeDM4DHWOX",
+    "answerable": false
+   },
+   "General": {
+    "id": "DIC_kwDOVBOeDM4DHWOY",
+    "answerable": false
+   },
+   "Ideas": {
+    "id": "DIC_kwDOVBOeDM4DHWOa",
+    "answerable": false
+   },
+   "Polls": {
+    "id": "DIC_kwDOVBOeDM4DHWOc",
+    "answerable": false
+   },
+   "Q&A": {
+    "id": "DIC_kwDOVBOeDM4DHWOZ",
+    "answerable": true
+   },
+   "Show and tell": {
+    "id": "DIC_kwDOVBOeDM4DHWOb",
+    "answerable": false
+   }
+  }
+ },
+ "priv_disc": {
+  "id": "D_kwDOVBOdv84Ap4Ea",
+  "number": 6,
+  "url": "https://github.com/BB-Pr0-2/bb2-perm-priv/discussions/6"
+ },
+ "lab_D1": {
+  "id": "D_kwDOVBOdV84Ap4Ec",
+  "number": 13,
+  "url": "https://github.com/BB-Pr0-2/bb2-perm-lab/discussions/13"
+ },
+ "lab_DC1": {
+  "id": "DC_kwDOVBOdV84BHyb_",
+  "databaseId": 18818815
+ },
+ "victim": {
+  "full_name": "hackerone-pr0/cp-victim-priv",
+  "id": 1410477727,
+  "node_id": "R_kgDOVBIunw",
+  "head_oid": "3eaac26d4d43e78d895b9af8f04e0a08f3ab7432",
+  "commit_node": "C_kwDOVBIun9oAKDNlYWFjMjZkNGQ0M2U3OGQ4OTViOWFmOGYwNGUwYTA4ZjNhYjc0MzI",
+  "blob_node": "B_kwDOVBIun9oAKDU1MWJkOTFmZmU1YWU5MTRkNDI3ZDdkNjA3MTRhOGIwMTg2Zjg1NDQ",
+  "blob_oid": "551bd91ffe5ae914d427d7d60714a8b0186f8544",
+  "issue1_node": "I_kwDOVBIun88AAAABV4jYtg",
+  "issue1_id": 5763553462,
+  "issues": [
+   {
+    "number": 1,
+    "id": "I_kwDOVBIun88AAAABV4jYtg",
+    "databaseId": 5763553462
+   },
+   {
+    "number": 2,
+    "id": "I_kwDOVBIun88AAAABV4luzQ",
+    "databaseId": 5763591885
+   },
+   {
+    "number": 3,
+    "id": "I_kwDOVBIun88AAAABV4lvcQ",
+    "databaseId": 5763592049
+   },
+   {
+    "number": 4,
+    "id": "I_kwDOVBIun88AAAABV4nYoA",
+    "databaseId": 5763618976
+   }
+  ],
+  "prs": [],
+  "file": "secret_module.py"
+ },
+ "priv": {
+  "commit_node": "C_kwDOVBOdv9oAKDFlNGFiZjQ0MGVmN2NmYWU4MzQ0OGJlNTc2ZWY5ZGEzYWVmYWMxMjE",
+  "head_oid": "1e4abf440ef7cfae83448be576ef9da3aefac121",
+  "blob_node": "B_kwDOVBOdv9oAKDliY2YzZTI1YWMzZTNmMmRkZjE0MDFjMjAyNjI1MTk5MTE5ZTYwNzk",
+  "blob_oid": "9bcf3e25ac3e3f2ddf1401c202625199119e6079"
+ },
+ "lab_PR_A": {
+  "number": 14,
+  "id": 4789202393,
+  "node_id": "PR_kwDOVBOdV88AAAABHXVt2Q",
+  "head_sha": "773486a1865ade57eef834413c1ab2b1989e65a4",
+  "head": "pr-a",
+  "base": "main"
+ },
+ "lab_PR_S1": {
+  "number": 15,
+  "id": 4789202712,
+  "node_id": "PR_kwDOVBOdV88AAAABHXVvGA",
+  "head_sha": "5c06292ac2eeb13df5d0136d167fa61520b0b5a7",
+  "head": "s1",
+  "base": "main"
+ },
+ "lab_PR_S2": {
+  "number": 16,
+  "id": 4789202980,
+  "node_id": "PR_kwDOVBOdV88AAAABHXVwJA",
+  "head_sha": "92c1f034d5d1a6e38399ddbc603e91b644763217",
+  "head": "s2",
+  "base": "s1"
+ },
+ "lab_PR_WF1": {
+  "number": 17,
+  "id": 4789203074,
+  "node_id": "PR_kwDOVBOdV88AAAABHXVwgg",
+  "head_sha": "18e5b2d531f046b409915fa362dcb893521a4c30",
+  "head": "wf-src",
+  "base": "wf-base-1"
+ },
+ "lab_PR_WF2": {
+  "number": 18,
+  "id": 4789203386,
+  "node_id": "PR_kwDOVBOdV88AAAABHXVxug",
+  "head_sha": "18e5b2d531f046b409915fa362dcb893521a4c30",
+  "head": "wf-src",
+  "base": "wf-base-2"
+ },
+ "lab_PR_WF3": {
+  "number": 19,
+  "id": 4789203689,
+  "node_id": "PR_kwDOVBOdV88AAAABHXVy6Q",
+  "head_sha": "18e5b2d531f046b409915fa362dcb893521a4c30",
+  "head": "wf-src",
+  "base": "wf-base-3"
+ },
+ "lab_PR_WF4": {
+  "number": 20,
+  "id": 4789208289,
+  "node_id": "PR_kwDOVBOdV88AAAABHXWE4Q",
+  "head_sha": "8ef51c11c1900f321e666643c556d6b16d50cf43",
+  "head": "wf-base-4",
+  "base": "wf-src"
+ },
+ "lab_PR_WF5": {
+  "number": 21,
+  "id": 4789208517,
+  "node_id": "PR_kwDOVBOdV88AAAABHXWFxQ",
+  "head_sha": "13273cc97610b43df0caf00b04db868e81d8031a",
+  "head": "wf-src2",
+  "base": "wf-base-5"
+ },
+ "lab_label_perm_test": "LA_kwDOVBOdV88AAAAC7wTu-w",
+ "lab_T4C1": {
+  "id": 6063462938,
+  "node_id": "IC_kwDOVBOdV88AAAABaWkaGg"
+ },
+ "lab_PR_A_RC": {
+  "id": 4221009578,
+  "node_id": "PRRC_kwDOVBOdV877l36q"
+ },
+ "lab_deployment": 6939877140,
+ "lab_main_sha": "9d003943308c5ee42f4265ca0bb7b4f12fc2e91c",
+ "marker_priv_parts": [
+  "PERMP",
+  "RIV-44af6cb961"
+ ],
+ "marker_victim_parts": [
+  "CPVIC",
+  "TIM-769a435911e0"
+ ]
+}
